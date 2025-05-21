@@ -48,14 +48,7 @@ public class BasicTitleTC extends BaseTest {
     }
 
 
-    //@Test
-    public void TestEmail () {
 
-        WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
-        email.sendKeys("rj@gmail.com");
-        System.out.println("1 " +email.getText());
-
-    }
 
 
 

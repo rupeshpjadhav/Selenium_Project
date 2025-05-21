@@ -12,7 +12,6 @@ import org.testng.annotations.Parameters;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Locale;
 import java.util.Properties;
 import java.util.Random;
 
@@ -53,8 +52,7 @@ public class BaseTestAP {
 
     public String randomString(int count)
     {
-        String generatedstring=RandomStringUtils.randomAlphabetic(count);
-        return generatedstring;
+        return RandomStringUtils.randomAlphabetic(count);
     }
 
     public int randomNumber(int count)

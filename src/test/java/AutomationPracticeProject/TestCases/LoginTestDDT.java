@@ -4,7 +4,6 @@ import AutomationPracticeProject.PageObjects.AccountPage;
 import AutomationPracticeProject.PageObjects.HomePage;
 import AutomationPracticeProject.PageObjects.LoginPage;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utilities.DataProviders;
 

@@ -1,22 +1,16 @@
 //package webdriver;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import java.time.Duration;
-import java.util.List;
 
 public class FirstExample {
 
 
 
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
         // TODO Auto-generated method stub
 
         WebDriver driver = new ChromeDriver();
