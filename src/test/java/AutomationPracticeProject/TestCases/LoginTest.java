@@ -1,0 +1,36 @@
+package AutomationPracticeProject.TestCases;
+
+import AutomationPracticeProject.PageObjects.AccountPage;
+import AutomationPracticeProject.PageObjects.HomePage;
+import AutomationPracticeProject.PageObjects.LoginPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class LoginTest extends BaseTestAP{
+
+
+    @Test
+    public void TestLoginPage () {
+        // Home page
+        HomePage hp = new HomePage(driver);
+        hp.ClickSignInBtn();
+        String email = p.getProperty("email");
+        String password = p.getProperty("password");
+        // Login Page
+
+        LoginPage lp = new LoginPage(driver);
+        lp.EnterEmailAddress(email);
+        lp.EnterPassword(password);
+        lp.ClickSignInButton();
+
+        //Account Page
+
+        AccountPage ap = new AccountPage(driver);
+        Assert.assertEquals(ap.IsAccountPageVisible(), true, "Account not created");
+
+        ap.ClickSignOut();
+
+    }
+
+
+}
