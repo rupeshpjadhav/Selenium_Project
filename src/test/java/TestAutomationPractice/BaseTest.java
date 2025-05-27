@@ -1,5 +1,6 @@
 package TestAutomationPractice;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -26,9 +27,11 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(p.getProperty("url1"));
         driver.manage().window().maximize();
+
+
     }
 
-    @AfterClass
+   // @AfterClass
     public void TearDown () {
         driver.quit();
     }
