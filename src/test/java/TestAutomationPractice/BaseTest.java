@@ -1,6 +1,5 @@
 package TestAutomationPractice;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -31,7 +30,7 @@ public class BaseTest {
 
     }
 
-   // @AfterClass
+   @AfterClass
     public void TearDown () {
         driver.quit();
     }
