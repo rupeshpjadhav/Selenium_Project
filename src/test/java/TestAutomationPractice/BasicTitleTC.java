@@ -1,17 +1,17 @@
 package TestAutomationPractice;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.List;
 
 public class BasicTitleTC extends BaseTest {
 
-
+    JavascriptExecutor js;
     @Test
     public void basicTitleTest () {
         String title = driver.findElement(By.cssSelector("h1[class='title']")).getText();
@@ -66,7 +66,7 @@ public class BasicTitleTC extends BaseTest {
 
         driver.findElement(By.xpath("//label[normalize-space()='Male']")).click();
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js = (JavascriptExecutor)driver;
 
         WebElement daysOption = driver.findElement(By.xpath("//label[normalize-space()='Days:']"));
         js.executeScript("arguments[0].scrollIntoView();",daysOption);
@@ -105,6 +105,107 @@ public class BasicTitleTC extends BaseTest {
         Select sorted = new Select(sorted_list);
         sorted.selectByValue("lion");
 
+
+    }
+
+
+    @Test
+    public void TestDatePickers () {
+
+        // DAte picker 1
+
+        driver.findElement(By.xpath("//input[@id='datepicker']")).click();
+        String expMonth = "July";
+        String expYear = "2026";
+        String expDate = "26";
+
+        // select month and year
+        while (true) {
+
+            String currentMonth = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']")).getText();
+            String currentYear = driver.findElement(By.xpath("//span[@class='ui-datepicker-year']")).getText();
+
+           // System.out.println(currentMonth+ " "+currentYear);
+
+            if (currentMonth.equals(expMonth) && currentYear.equals(expYear)) {
+                break;
+            }
+
+            driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();
+            //futureArrow.click();
+
+        }
+
+        // Select day
+        List<WebElement> daysList = driver.findElements(By.xpath("//tbody/tr/td[@data-handler='selectDay']"));
+        for (WebElement day :daysList) {
+            if (day.getText().equals(expDate)) {
+                day.click();
+            }
+        }
+
+
+        // DAte picker 2
+
+        String newDate = "26";
+        String newMonth = "Jul";
+        String newYear = "2027";
+
+        driver.findElement(By.xpath("//input[@id='txtDate']")).click();
+
+        WebElement SelectMonth = driver.findElement(By.xpath("//select[@aria-label='Select month']"));
+        Select month = new Select(SelectMonth);
+        month.selectByVisibleText(newMonth);
+
+
+        WebElement SelectYear = driver.findElement(By.xpath("//select[@aria-label='Select year']"));
+        Select year = new Select(SelectYear);
+        year.selectByVisibleText(newYear);
+
+
+
+
+        List<WebElement> days= driver.findElements(By.xpath("//tbody/tr/td[@data-handler='selectDay']"));
+
+        for (WebElement day : days) {
+            if (day.getText().equals(newDate)) {
+                day.click();
+            }
+        }
+
+
+
+
+        // Date picker 3
+
+
+
+
+    }
+
+    @Test
+    public void TestScreenshots () {
+
+        // Take screenshot of entire page
+
+        File sourceFile = new File("./output//file1.png");
+
+        TakesScreenshot ts = (TakesScreenshot) driver;
+
+        File targetFile = ts.getScreenshotAs(OutputType.FILE);
+
+        targetFile.renameTo(sourceFile);
+
+
+        // Take screenshot of specific web elements
+
+      //  js = (JavascriptExecutor)driver;
+
+        WebElement datePicker = driver.findElement(By.xpath("//div[@class='date-picker-box']"));
+        //js.executeScript("arguments[0].scrollIntoView();",datePicker);
+        File f = new File("./output//file2.png");
+        File screenshotAs = datePicker.getScreenshotAs(OutputType.FILE);
+        screenshotAs.renameTo(f);
 
     }
 

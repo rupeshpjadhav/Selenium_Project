@@ -72,7 +72,7 @@ public class RegistrationPage extends BaseClassAP {
     public String EnterEmailField() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOf(EnterEmailField));
-        return EnterEmailField.getAttribute("value");
+        return EnterEmailField.getDomAttribute("value");
     }
 
     public void EnterPasswordField(String password) {
