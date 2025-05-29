@@ -1,7 +1,6 @@
 package TestAutomationPractice;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.List;
 
-public class BasicTitleTC extends BaseTest {
+public class TestCasesMasterList extends BaseTest {
 
     JavascriptExecutor js;
     @Test
