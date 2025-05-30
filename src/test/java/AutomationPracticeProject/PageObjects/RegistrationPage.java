@@ -5,14 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class RegistrationPage extends BaseClassAP {
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
+
+
 
     @FindBy (xpath = "//input[@id='id_gender1']")
     WebElement SelectMaleRadioBtn ;
@@ -70,8 +69,10 @@ public class RegistrationPage extends BaseClassAP {
 
 
     public String EnterEmailField() {
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOf(EnterEmailField));
+//        new WebDriverWait(driver, Duration.ofSeconds(10))
+//                .until(ExpectedConditions.visibilityOf(EnterEmailField));
+
+        myWait.until(ExpectedConditions.visibilityOf(EnterEmailField));
         return EnterEmailField.getDomAttribute("value");
     }
 

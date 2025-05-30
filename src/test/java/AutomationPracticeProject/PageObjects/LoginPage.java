@@ -4,9 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class LoginPage extends BaseClassAP{
     public LoginPage(WebDriver driver) {
@@ -75,8 +72,7 @@ public class LoginPage extends BaseClassAP{
     public String ReturnAuthFailedErrorMessage () {
         //return AuthFailedErrMessage.getText();
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOf(AuthFailedErrMessage));
+        myWait.until(ExpectedConditions.visibilityOf(AuthFailedErrMessage));
         return AuthFailedErrMessage.getText();
     }
 
@@ -85,8 +81,7 @@ public class LoginPage extends BaseClassAP{
     public String ReturnEmailMissingErrorMessage () {
         //return AuthFailedErrMessage.getText();
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOf(EmailMissingErrMessage));
+        myWait.until(ExpectedConditions.visibilityOf(EmailMissingErrMessage));
         return EmailMissingErrMessage.getText();
     }
 
@@ -94,8 +89,7 @@ public class LoginPage extends BaseClassAP{
     public String ReturnPasswordMissingErrorMessage () {
         //return AuthFailedErrMessage.getText();
 
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOf(PasswordMissingErrMessage));
+        myWait.until(ExpectedConditions.visibilityOf(PasswordMissingErrMessage));
         return PasswordMissingErrMessage.getText();
     }
 
