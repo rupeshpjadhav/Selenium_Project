@@ -19,7 +19,7 @@ http://www.automationpractice.pl/
 
 **Reports:** Extent Reports
 
-**Implemented following :- **
+**Implemented Following:**
 1. Page Object Model
 2. Reports using Extent Reports
 3. Excel utility is handled
