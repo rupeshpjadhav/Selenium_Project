@@ -24,7 +24,7 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 
-public class BaseTestAP {
+public class  BaseTestAP {
 
         WebDriver driver;
         Properties p;
@@ -44,21 +44,31 @@ public class BaseTestAP {
 
                 if(os.equalsIgnoreCase("windows")) {
                     capabilities.setPlatform(Platform.WIN10);
+                    System.out.println("Running tests on Windows OS");
                 }
 
                 else if (os.equalsIgnoreCase("mac")) {
                     capabilities.setPlatform(Platform.MAC);
+                    System.out.println("Running tests on Mac OS");
 
                 }
+                else if (os.equalsIgnoreCase("linux")) {
+                    capabilities.setPlatform(Platform.LINUX);
+                    System.out.println("Running tests on Linux OS");
+                }
+
                 else {
                     System.out.println("Invalid OS given");
                     return;
                 }
 
                 switch (browser.toLowerCase()) {
-                    case "chrome": capabilities.setBrowserName("chrome"); break;
-                    case "edge": capabilities.setBrowserName("MicrosoftEdge"); break;
-                    case "firefox" : capabilities.setBrowserName("firefox"); break;
+                    case "chrome": capabilities.setBrowserName("chrome");
+                        System.out.println("Running tests on Chrome browser"); break;
+                    case "edge": capabilities.setBrowserName("MicrosoftEdge");
+                        System.out.println("Running tests on Edge browser"); break;
+                    case "firefox" : capabilities.setBrowserName("firefox");
+                        System.out.println("Running tests on Firefox browser"); break;
                     default:
                         System.out.println("Invalid browser"); return;
                 }
@@ -70,9 +80,12 @@ public class BaseTestAP {
             if (p.getProperty("execution_env").equalsIgnoreCase("local")) {
                 switch (browser.toLowerCase())
                 {
-                    case "chrome" : driver = new ChromeDriver(); break;
-                    case "edge" : driver = new EdgeDriver(); break;
-                    case "firefox" : driver = new FirefoxDriver(); break;
+                    case "chrome" : driver = new ChromeDriver();
+                        System.out.println("Running tests on Chrome browser");break;
+                    case "edge" : driver = new EdgeDriver();
+                        System.out.println("Running tests on Edge browser"); break;
+                    case "firefox" : driver = new FirefoxDriver();
+                        System.out.println("Running tests on Firefox browser"); break;
                     default :
                         System.out.println("Invalid browser"); return;
                 }
