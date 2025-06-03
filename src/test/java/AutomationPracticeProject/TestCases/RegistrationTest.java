@@ -4,8 +4,6 @@ import AutomationPracticeProject.PageObjects.AccountPage;
 import AutomationPracticeProject.PageObjects.HomePage;
 import AutomationPracticeProject.PageObjects.LoginPage;
 import AutomationPracticeProject.PageObjects.RegistrationPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v134.fedcm.model.AccountUrlType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +11,8 @@ public class RegistrationTest extends BaseTestAP {
 
     @Test
     public void TestRegistration () throws InterruptedException {
+
+        logger.info("========== Starting Test -> TestRegistration ===============");
         //homepage
         HomePage hp = new HomePage(driver);
         hp.ClickSignInBtn();
@@ -32,12 +32,12 @@ public class RegistrationTest extends BaseTestAP {
         rp.SelectMaleRadioButton();
         rp.EnterFirstNameText(randomString(7));
         rp.EnterLastNameText(randomString(5));
-        rp.EnterEmailField();
-        System.out.println("Actual is "+rp.EnterEmailField());
-        Assert.assertEquals(rp.EnterEmailField(),newEmailAddress,"Improper Email given");
+        String givenEmail = rp.EnterEmailField();
+        //System.out.println("Actual is "+rp.EnterEmailField());
+        Assert.assertEquals(givenEmail,newEmailAddress,"Improper Email given");
         String password = randomAlphaNumberic(7,5);
         rp.EnterPasswordField(password);
-        System.out.println("Password is "+password);
+        //System.out.println("Password is "+password);
         rp.SelectDaysDropDownButton(randomNumber(28));
         rp.SelectMonthDropDownButton(randomNumber(11));
         rp.SelectYearDropDownButton("2024");
@@ -48,8 +48,9 @@ public class RegistrationTest extends BaseTestAP {
         System.out.println(ap.AccountSuccessMessage());
         Assert.assertEquals(ap.AccountSuccessMessage(),"Your account has been created.","Account not created");
 
+        logger.info("User is registered successfully with username as "+givenEmail+" and password as "+password);
 
-
+        logger.info("========== Test -> TestRegistration Ended ===============");
 
 
 

@@ -1,6 +1,8 @@
 package AutomationPracticeProject.TestCases;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,8 +28,10 @@ import java.util.Random;
 
 public class  BaseTestAP {
 
-        WebDriver driver;
-        Properties p;
+        public WebDriver driver;
+        Properties p; // Properties file
+
+        Logger logger; // Log4j
 
 
         @BeforeClass
@@ -37,6 +41,8 @@ public class  BaseTestAP {
             FileReader file=new FileReader("./src//test//resources//config.properties");
             p=new Properties();
             p.load(file);
+
+            logger = LogManager.getLogger(this.getClass()); // log4j
 
             if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
 
@@ -94,11 +100,14 @@ public class  BaseTestAP {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.get(p.getProperty("url2"));
             driver.manage().window().maximize();
+
+            logger.info("Driver for "+browser+" is initialized and launched");
         }
 
         @AfterClass
         public void TearDown () {
             driver.quit();
+            logger.info("Driver is closed");
         }
 
 
@@ -123,7 +132,7 @@ public class  BaseTestAP {
     }
 
 
-    public String captureScreen(String tname) throws IOException {
+    public String captureScreen(String tname, WebDriver driver) throws IOException {
 
         String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 

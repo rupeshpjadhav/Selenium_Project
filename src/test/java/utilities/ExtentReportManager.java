@@ -6,6 +6,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -73,11 +74,22 @@ public class ExtentReportManager implements ITestListener {
 
 		test.log(Status.FAIL,result.getName()+" got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
+		Object currentClass = result.getInstance();
+		//  Retrieves the actual test class instance (i.e., the object that failed during the test).
+
+		WebDriver driver = ((BaseTestAP) currentClass).driver;
+					/*
+			(BaseTestAP) currentClass:
+			Casts the Object type to your base test class, BaseTestAP, assuming all your test classes extend from it.
+			.driver:
+			Accesses the WebDriver instance from that test class.
+			So, the overall purpose is: To get the WebDriver instance of the test that failed.
+
+			* */
 
 		try {
-			String imgPath = new BaseTestAP().captureScreen(result.getName());
+			String imgPath = new BaseTestAP().captureScreen(result.getName(),driver);
 			test.addScreenCaptureFromPath(imgPath);
-
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
