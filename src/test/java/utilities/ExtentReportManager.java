@@ -80,7 +80,7 @@ public class ExtentReportManager implements ITestListener {
 		WebDriver driver = ((BaseTestAP) currentClass).driver;
 					/*
 			(BaseTestAP) currentClass:
-			Casts the Object type to your base test class, BaseTestAP, assuming all your test classes extend from it.
+			Casts the Object type to your base test class, BaseTestAP, since all test classes extend from it.
 			.driver:
 			Accesses the WebDriver instance from that test class.
 			So, the overall purpose is: To get the WebDriver instance of the test that failed.
