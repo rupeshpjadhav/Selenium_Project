@@ -12,7 +12,7 @@ public class LoginTest extends BaseTestAP{
     @Test
     public void TestLoginPage () {
 
-        logger.info("========== Starting Test -> TestLoginPage ===============");
+        logger.info("========== Starting Test --> TestLoginPage ===============");
         // Home page
         HomePage hp = new HomePage(driver);
         hp.ClickSignInBtn();
