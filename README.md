@@ -26,6 +26,7 @@ http://www.automationpractice.pl/
 4. Selenium Grid with standalone as well as hub-node using docker
 5. Cross browser and parallel testing using TestNG
 6. Added maven plugins for execution from pom.xml - maven-compiler-plugin and maven-surefire-plugin
+7. Implemented logging using Log4j
    
 
 
