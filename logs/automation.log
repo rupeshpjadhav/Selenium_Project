@@ -1,72 +1,36 @@
-2025-06-04 17:24:49 INFO  RegistrationTest:104 - Driver for chrome is initialized and launched
-2025-06-04 17:24:49 INFO  RegistrationTest:15 - ========== Starting Test -> TestRegistration ===============
-2025-06-04 17:25:00 INFO  RegistrationTest:51 - User is registered successfully with username as VPZQmd1@gmail.com and password as vrmOeHa@72049
-2025-06-04 17:25:00 INFO  RegistrationTest:53 - ========== Test -> TestRegistration Ended ===============
-2025-06-04 17:25:00 INFO  RegistrationTest:110 - Driver is closed
-2025-06-04 17:25:06 INFO  LoginTest:104 - Driver for chrome is initialized and launched
-2025-06-04 17:25:06 INFO  LoginTest:15 - ========== Starting Test ---> TestLoginPage ===============
-2025-06-04 17:25:08 INFO  LoginTest:27 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
-2025-06-04 17:25:09 INFO  LoginTest:35 - Signed in successfully from the login page
-2025-06-04 17:25:11 INFO  LoginTest:38 - Logged Out Successfully
-2025-06-04 17:25:11 INFO  LoginTest:40 - ========== Test -> TestLoginPage Ended ===============
-2025-06-04 17:25:11 INFO  LoginTest:110 - Driver is closed
-2025-06-04 17:25:18 INFO  LoginTestDDT:104 - Driver for chrome is initialized and launched
-2025-06-04 17:25:20 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 17:25:22 INFO  LoginTestDDT:26 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
-2025-06-04 17:25:22 INFO  LoginTestDDT:35 - Signed in successfully from the login page
-2025-06-04 17:25:24 INFO  LoginTestDDT:37 - Logged Out Successfully
-2025-06-04 17:25:24 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 17:25:24 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 17:25:26 INFO  LoginTestDDT:26 - Entered username as SrZwVm1@gmail.com and password as zteogYr@15249
-2025-06-04 17:25:28 INFO  LoginTestDDT:35 - Signed in successfully from the login page
-2025-06-04 17:25:31 INFO  LoginTestDDT:37 - Logged Out Successfully
-2025-06-04 17:25:31 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 17:25:31 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 17:25:33 INFO  LoginTestDDT:26 - Entered username as CQMKSC2@gmail.com and password as 
-2025-06-04 17:25:33 INFO  LoginTestDDT:43 - Showed following message for password => Password is required.
-2025-06-04 17:25:33 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 17:25:33 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 17:25:38 INFO  LoginTestDDT:26 - Entered username as  and password as gamArhF@03809
-2025-06-04 17:25:39 INFO  LoginTestDDT:49 - Showed following message for email => An email address required.
-2025-06-04 17:25:39 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 17:25:39 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 17:25:41 INFO  LoginTestDDT:26 - Entered username as rjtechitouttesting@gmail.com and password as gamArhF@03809
-2025-06-04 17:25:41 INFO  LoginTestDDT:55 - Showed following message for authentication => Authentication failed.
-2025-06-04 17:25:41 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 17:25:42 INFO  LoginTestDDT:110 - Driver is closed
-2025-06-04 18:22:26 INFO  RegistrationTest:104 - Driver for chrome is initialized and launched
-2025-06-04 18:22:26 INFO  RegistrationTest:15 - ========== Starting Test -> TestRegistration ===============
-2025-06-04 18:22:38 INFO  RegistrationTest:51 - User is registered successfully with username as uPFEqK2@gmail.com and password as BcnuJmD@38753
-2025-06-04 18:22:38 INFO  RegistrationTest:53 - ========== Test -> TestRegistration Ended ===============
-2025-06-04 18:22:38 INFO  RegistrationTest:110 - Driver is closed
-2025-06-04 18:22:47 INFO  LoginTest:104 - Driver for chrome is initialized and launched
-2025-06-04 18:22:47 INFO  LoginTest:15 - ========== Starting Test ----> TestLoginPage ===============
-2025-06-04 18:22:49 INFO  LoginTest:27 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
-2025-06-04 18:22:50 INFO  LoginTest:35 - Signed in successfully from the login page
-2025-06-04 18:22:51 INFO  LoginTest:38 - Logged Out Successfully
-2025-06-04 18:22:51 INFO  LoginTest:40 - ========== Test -> TestLoginPage Ended ===============
-2025-06-04 18:22:52 INFO  LoginTest:110 - Driver is closed
-2025-06-04 18:22:58 INFO  LoginTestDDT:104 - Driver for chrome is initialized and launched
-2025-06-04 18:22:59 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 18:23:03 INFO  LoginTestDDT:26 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
-2025-06-04 18:23:03 INFO  LoginTestDDT:35 - Signed in successfully from the login page
-2025-06-04 18:23:05 INFO  LoginTestDDT:37 - Logged Out Successfully
-2025-06-04 18:23:05 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 18:23:05 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 18:23:09 INFO  LoginTestDDT:26 - Entered username as SrZwVm1@gmail.com and password as zteogYr@15249
-2025-06-04 18:23:09 INFO  LoginTestDDT:35 - Signed in successfully from the login page
-2025-06-04 18:23:10 INFO  LoginTestDDT:37 - Logged Out Successfully
-2025-06-04 18:23:10 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 18:23:10 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 18:23:12 INFO  LoginTestDDT:26 - Entered username as CQMKSC2@gmail.com and password as 
-2025-06-04 18:23:12 INFO  LoginTestDDT:43 - Showed following message for password => Password is required.
-2025-06-04 18:23:12 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 18:23:12 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 18:23:14 INFO  LoginTestDDT:26 - Entered username as  and password as gamArhF@03809
-2025-06-04 18:23:14 INFO  LoginTestDDT:49 - Showed following message for email => An email address required.
-2025-06-04 18:23:14 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 18:23:14 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
-2025-06-04 18:23:16 INFO  LoginTestDDT:26 - Entered username as rjtechitouttesting@gmail.com and password as gamArhF@03809
-2025-06-04 18:23:17 INFO  LoginTestDDT:55 - Showed following message for authentication => Authentication failed.
-2025-06-04 18:23:17 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
-2025-06-04 18:23:17 INFO  LoginTestDDT:110 - Driver is closed
+2025-06-13 14:42:11 INFO  RegistrationTest:104 - Driver for chrome is initialized and launched
+2025-06-13 14:42:11 INFO  RegistrationTest:15 - ========== Starting Test -> TestRegistration ===============
+2025-06-13 14:42:22 INFO  RegistrationTest:51 - User is registered successfully with username as lymddt2@gmail.com and password as GkjIUpZ@55278
+2025-06-13 14:42:22 INFO  RegistrationTest:53 - ========== Test -> TestRegistration Ended ===============
+2025-06-13 14:42:22 INFO  RegistrationTest:110 - Driver is closed
+2025-06-13 14:42:28 INFO  LoginTest:104 - Driver for chrome is initialized and launched
+2025-06-13 14:42:28 INFO  LoginTest:15 - ========== Starting Test ----> TestLoginPage ===============
+2025-06-13 14:42:30 INFO  LoginTest:27 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
+2025-06-13 14:42:31 INFO  LoginTest:35 - Signed in successfully from the login page
+2025-06-13 14:42:32 INFO  LoginTest:38 - Logged Out Successfully
+2025-06-13 14:42:32 INFO  LoginTest:40 - ========== Test -> TestLoginPage Ended ===============
+2025-06-13 14:42:32 INFO  LoginTest:110 - Driver is closed
+2025-06-13 14:42:40 INFO  LoginTestDDT:104 - Driver for chrome is initialized and launched
+2025-06-13 14:42:42 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
+2025-06-13 14:42:43 INFO  LoginTestDDT:26 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
+2025-06-13 14:42:44 INFO  LoginTestDDT:35 - Signed in successfully from the login page
+2025-06-13 14:42:46 INFO  LoginTestDDT:37 - Logged Out Successfully
+2025-06-13 14:42:46 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
+2025-06-13 14:42:46 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
+2025-06-13 14:42:49 INFO  LoginTestDDT:26 - Entered username as SrZwVm1@gmail.com and password as zteogYr@15249
+2025-06-13 14:42:49 INFO  LoginTestDDT:35 - Signed in successfully from the login page
+2025-06-13 14:42:50 INFO  LoginTestDDT:37 - Logged Out Successfully
+2025-06-13 14:42:50 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
+2025-06-13 14:42:50 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
+2025-06-13 14:42:51 INFO  LoginTestDDT:26 - Entered username as CQMKSC2@gmail.com and password as 
+2025-06-13 14:42:51 INFO  LoginTestDDT:43 - Showed following message for password => Password is required.
+2025-06-13 14:42:51 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
+2025-06-13 14:42:51 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
+2025-06-13 14:42:53 INFO  LoginTestDDT:26 - Entered username as  and password as gamArhF@03809
+2025-06-13 14:42:54 INFO  LoginTestDDT:49 - Showed following message for email => An email address required.
+2025-06-13 14:42:54 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
+2025-06-13 14:42:54 INFO  LoginTestDDT:14 - ========== Starting Test -> Test_LoginDDT ===============
+2025-06-13 14:42:55 INFO  LoginTestDDT:26 - Entered username as rjtechitouttesting@gmail.com and password as gamArhF@03809
+2025-06-13 14:42:56 INFO  LoginTestDDT:55 - Showed following message for authentication => Authentication failed.
+2025-06-13 14:42:56 INFO  LoginTestDDT:59 - ========== Test -> Test_LoginDDT Ended ===============
+2025-06-13 14:42:56 INFO  LoginTestDDT:110 - Driver is closed
