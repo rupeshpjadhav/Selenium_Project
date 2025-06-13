@@ -39,5 +39,7 @@ http://www.automationpractice.pl/
 5. To down the docker environment, run command -> docker-compose down 
    
 
+**Framework Diagram**
 
+![MyFramework](https://github.com/user-attachments/assets/2bf7b846-e9e7-49e4-aa51-102ec078b99b)
 
