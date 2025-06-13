@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseTestAP {
 
-    @Test
+    @Test(groups={"Regression","Master"})
     public void TestRegistration () throws InterruptedException {
 
         logger.info("========== Starting Test -> TestRegistration ===============");

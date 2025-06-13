@@ -28,87 +28,87 @@ import java.util.Random;
 
 public class  BaseTestAP {
 
-        public WebDriver driver;
-        Properties p; // Properties file
+    public WebDriver driver;
+    Properties p; // Properties file
 
-        Logger logger; // Log4j
+    Logger logger; // Log4j
 
 
-        @BeforeClass
-        @Parameters({"os","browser"})
-        public void Setup(String os, String browser) throws IOException {
-            //Loading config.properties file
-            FileReader file=new FileReader("./src//test//resources//config.properties");
-            p=new Properties();
-            p.load(file);
+    @BeforeClass(groups= {"Sanity","Regression","Master"})
+    @Parameters({"os","browser"})
+    public void Setup(String os, String browser) throws IOException {
+        //Loading config.properties file
+        FileReader file=new FileReader("./src//test//resources//config.properties");
+        p=new Properties();
+        p.load(file);
 
-            logger = LogManager.getLogger(this.getClass()); // log4j
+        logger = LogManager.getLogger(this.getClass()); // log4j
 
-            if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
+        if (p.getProperty("execution_env").equalsIgnoreCase("remote")) {
 
-                DesiredCapabilities capabilities = new DesiredCapabilities();
+            DesiredCapabilities capabilities = new DesiredCapabilities();
 
-                if(os.equalsIgnoreCase("windows")) {
-                    capabilities.setPlatform(Platform.WIN10);
-                    System.out.println("Running tests on Windows OS");
-                }
-
-                else if (os.equalsIgnoreCase("mac")) {
-                    capabilities.setPlatform(Platform.MAC);
-                    System.out.println("Running tests on Mac OS");
-
-                }
-                else if (os.equalsIgnoreCase("linux")) {
-                    capabilities.setPlatform(Platform.LINUX);
-                    System.out.println("Running tests on Linux OS");
-                }
-
-                else {
-                    System.out.println("Invalid OS given");
-                    return;
-                }
-
-                switch (browser.toLowerCase()) {
-                    case "chrome": capabilities.setBrowserName("chrome");
-                        System.out.println("Running tests on Chrome browser"); break;
-                    case "edge": capabilities.setBrowserName("MicrosoftEdge");
-                        System.out.println("Running tests on Edge browser"); break;
-                    case "firefox" : capabilities.setBrowserName("firefox");
-                        System.out.println("Running tests on Firefox browser"); break;
-                    default:
-                        System.out.println("Invalid browser"); return;
-                }
-
-                driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
-
+            if(os.equalsIgnoreCase("windows")) {
+                capabilities.setPlatform(Platform.WIN10);
+                System.out.println("Running tests on Windows OS");
             }
 
-            if (p.getProperty("execution_env").equalsIgnoreCase("local")) {
-                switch (browser.toLowerCase())
-                {
-                    case "chrome" : driver = new ChromeDriver();
-                        System.out.println("Running tests on Chrome browser");break;
-                    case "edge" : driver = new EdgeDriver();
-                        System.out.println("Running tests on Edge browser"); break;
-                    case "firefox" : driver = new FirefoxDriver();
-                        System.out.println("Running tests on Firefox browser"); break;
-                    default :
-                        System.out.println("Invalid browser"); return;
-                }
+            else if (os.equalsIgnoreCase("mac")) {
+                capabilities.setPlatform(Platform.MAC);
+                System.out.println("Running tests on Mac OS");
+
+            }
+            else if (os.equalsIgnoreCase("linux")) {
+                capabilities.setPlatform(Platform.LINUX);
+                System.out.println("Running tests on Linux OS");
             }
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.get(p.getProperty("url2"));
-            driver.manage().window().maximize();
+            else {
+                System.out.println("Invalid OS given");
+                return;
+            }
 
-            logger.info("Driver for "+browser+" is initialized and launched");
+            switch (browser.toLowerCase()) {
+                case "chrome": capabilities.setBrowserName("chrome");
+                    System.out.println("Running tests on Chrome browser"); break;
+                case "edge": capabilities.setBrowserName("MicrosoftEdge");
+                    System.out.println("Running tests on Edge browser"); break;
+                case "firefox" : capabilities.setBrowserName("firefox");
+                    System.out.println("Running tests on Firefox browser"); break;
+                default:
+                    System.out.println("Invalid browser"); return;
+            }
+
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+
         }
 
-        @AfterClass
-        public void TearDown () {
-            driver.quit();
-            logger.info("Driver is closed");
+        if (p.getProperty("execution_env").equalsIgnoreCase("local")) {
+            switch (browser.toLowerCase())
+            {
+                case "chrome" : driver = new ChromeDriver();
+                    System.out.println("Running tests on Chrome browser");break;
+                case "edge" : driver = new EdgeDriver();
+                    System.out.println("Running tests on Edge browser"); break;
+                case "firefox" : driver = new FirefoxDriver();
+                    System.out.println("Running tests on Firefox browser"); break;
+                default :
+                    System.out.println("Invalid browser"); return;
+            }
         }
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get(p.getProperty("url2"));
+        driver.manage().window().maximize();
+
+        logger.info("Driver for "+browser+" is initialized and launched");
+    }
+
+    @AfterClass(groups= {"Sanity","Regression","Master"})
+    public void TearDown () {
+        driver.quit();
+        logger.info("Driver is closed");
+    }
 
 
     public String randomString(int count)
@@ -148,6 +148,6 @@ public class  BaseTestAP {
 
     }
 
-    }
+}
 
 

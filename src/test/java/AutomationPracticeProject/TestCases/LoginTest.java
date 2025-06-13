@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTestAP{
 
 
-    @Test
+    @Test(groups={"Sanity","Master"})
     public void TestLoginPage () {
 
         logger.info("========== Starting Test ----> TestLoginPage ===============");

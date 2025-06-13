@@ -25,8 +25,9 @@ http://www.automationpractice.pl/
 3. Excel utility is handled
 4. Selenium Grid with standalone as well as hub-node using docker.
 5. Cross browser and parallel testing using TestNG
-6. Added maven plugins for execution from pom.xml - maven-compiler-plugin and maven-surefire-plugin
-7. Implemented logging using Log4j
+6. Grouping of test cases is implement using TestNG
+7. Added maven plugins for execution from pom.xml - maven-compiler-plugin and maven-surefire-plugin
+8. Implemented logging using Log4j
 
 
 **Pre-requisites for Selenium Grid:**
