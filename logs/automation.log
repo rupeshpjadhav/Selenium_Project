@@ -46,3 +46,15 @@
 2025-06-13 16:36:56 INFO  LoginTest:38 - Logged Out Successfully
 2025-06-13 16:36:56 INFO  LoginTest:40 - ========== Test -> TestLoginPage Ended ===============
 2025-06-13 16:36:57 INFO  LoginTest:110 - Driver is closed
+2025-06-13 16:41:56 INFO  RegistrationTest:104 - Driver for chrome is initialized and launched
+2025-06-13 16:41:56 INFO  RegistrationTest:15 - ========== Starting Test -> TestRegistration ===============
+2025-06-13 16:42:06 INFO  RegistrationTest:51 - User is registered successfully with username as XKQrBD1@gmail.com and password as pogQXvK@07789
+2025-06-13 16:42:06 INFO  RegistrationTest:53 - ========== Test -> TestRegistration Ended ===============
+2025-06-13 16:42:07 INFO  RegistrationTest:110 - Driver is closed
+2025-06-13 16:42:13 INFO  LoginTest:104 - Driver for chrome is initialized and launched
+2025-06-13 16:42:13 INFO  LoginTest:15 - ========== Starting Test ----> TestLoginPage ===============
+2025-06-13 16:42:15 INFO  LoginTest:27 - Entered username as jJfTLF3@gmail.com and password as aEzbJue@14043
+2025-06-13 16:42:16 INFO  LoginTest:35 - Signed in successfully from the login page
+2025-06-13 16:42:18 INFO  LoginTest:38 - Logged Out Successfully
+2025-06-13 16:42:18 INFO  LoginTest:40 - ========== Test -> TestLoginPage Ended ===============
+2025-06-13 16:42:18 INFO  LoginTest:110 - Driver is closed

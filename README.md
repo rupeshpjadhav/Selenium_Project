@@ -21,7 +21,7 @@ http://www.automationpractice.pl/
 
 **Implemented Following:**
 1. Page Object Model
-2. Reports using Extent Reports
+2. Reports using Extent Reports. Report is created and shown after test execution.
 3. Excel utility is handled
 4. Selenium Grid with standalone as well as hub-node using docker.
 5. Cross browser and parallel testing using TestNG
