@@ -69,9 +69,6 @@ public class RegistrationPage extends BaseClassAP {
 
 
     public String EnterEmailField() {
-//        new WebDriverWait(driver, Duration.ofSeconds(10))
-//                .until(ExpectedConditions.visibilityOf(EnterEmailField));
-
         myWait.until(ExpectedConditions.visibilityOf(EnterEmailField));
         return EnterEmailField.getDomAttribute("value");
     }
@@ -82,7 +79,6 @@ public class RegistrationPage extends BaseClassAP {
 
     public void SelectDaysDropDownButton (int days) {
         //SelectDaysDropdown.click();
-
         Select s = new Select(SelectDaysDropdown);
         s.selectByValue(String.valueOf(days));
 
