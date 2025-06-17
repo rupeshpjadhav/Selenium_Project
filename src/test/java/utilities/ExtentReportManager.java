@@ -88,7 +88,7 @@ public class ExtentReportManager implements ITestListener {
 			* */
 
 		try {
-			String imgPath = new BaseTestAP().captureScreen(result.getName(),driver);
+			String imgPath = ((BaseTestAP) currentClass).captureScreen(result.getName(),driver);
 			test.addScreenCaptureFromPath(imgPath);
 		} catch (IOException e1) {
 			e1.printStackTrace();

@@ -9,7 +9,7 @@ import utilities.DataProviders;
 
 public class LoginTestDDT extends BaseTestAP{
 
-    @Test(dataProvider="LoginData",dataProviderClass= DataProviders.class)
+    @Test(dataProvider="LoginData",dataProviderClass= DataProviders.class,groups = "datadriventest")
     public void Test_LoginDDT (String email, String password, String Status, String message) {
         logger.info("========== Starting Test -> Test_LoginDDT ===============");
         // Home page

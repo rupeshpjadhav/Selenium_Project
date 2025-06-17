@@ -34,7 +34,7 @@ public class  BaseTestAP {
     Logger logger; // Log4j
 
 
-    @BeforeClass(groups= {"Sanity","Regression","Master"})
+    @BeforeClass(alwaysRun = true)
     @Parameters({"os","browser"})
     public void Setup(String os, String browser) throws IOException {
         //Loading config.properties file
@@ -104,7 +104,8 @@ public class  BaseTestAP {
         logger.info("Driver for "+browser+" is initialized and launched");
     }
 
-    @AfterClass(groups= {"Sanity","Regression","Master"})
+
+    @AfterClass(alwaysRun = true)
     public void TearDown () {
         driver.quit();
         logger.info("Driver is closed");

@@ -6,7 +6,7 @@
 
     <groups>
         <run>
-            <include name="Master"/>
+            <include name="datadriventest"/>
             <!--<include name="Sanity"/>-->
             <!--<include name="Regression"/> -->
             <!-- <exclude name="" /> -->
