@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.DataProviders;
 
-public class LoginTestDDT extends BaseTestAP{
+public class TestLoginDDT extends BaseTestAP{
 
     @Test(dataProvider="LoginData",dataProviderClass= DataProviders.class,groups = "datadriventest")
     public void Test_LoginDDT (String email, String password, String Status, String message) {

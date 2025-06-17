@@ -36,7 +36,7 @@
         <classes>
             <class name="AutomationPracticeProject.TestCases.RegistrationTest"/>
             <!--   <class name="AutomationPracticeProject.TestCases.LoginTest"/> -->
-            <!--    <class name="AutomationPracticeProject.TestCases.LoginTestDDT"/> -->
+            <!--    <class name="AutomationPracticeProject.TestCases.TestLoginDDT"/> -->
 
         </classes>
     </test> <!-- Test -->
