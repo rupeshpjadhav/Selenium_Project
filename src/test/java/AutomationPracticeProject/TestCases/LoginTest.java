@@ -31,7 +31,7 @@ public class LoginTest extends BaseTestAP{
         //Account Page
 
         AccountPage ap = new AccountPage(driver);
-        Assert.assertEquals(ap.IsAccountPageVisible(), true, "Account not created");
+        Assert.assertTrue(ap.IsAccountPageVisible(), "Account not created");
         logger.info("Signed in successfully from the login page");
 
         ap.ClickSignOut();

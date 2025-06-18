@@ -29,6 +29,7 @@ public class RegistrationTest extends BaseTestAP {
         RegistrationPage rp = new RegistrationPage(driver);
         //Thread.sleep(5000);
 
+        rp.SelectFemaleRadioButton();
         rp.SelectMaleRadioButton();
         rp.EnterFirstNameText(randomString(7));
         rp.EnterLastNameText(randomString(5));

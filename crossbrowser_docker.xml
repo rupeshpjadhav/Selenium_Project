@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 
-<suite name="Cross Browser Docker Suite" thread-count="5" parallel="tests" >
+<suite name="Cross Browser Docker Suite" thread-count="3" parallel="tests" >
 
     <listeners>
         <listener class-name="utilities.ExtentReportManager" />

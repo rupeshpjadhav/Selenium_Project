@@ -27,33 +27,31 @@ public class TestLoginDDT extends BaseTestAP{
 
         //Account Page
 
-        if(Status.equals("Valid")) {
-            AccountPage ap = new AccountPage(driver);
-            Assert.assertEquals(ap.AccountCreatedMessage().startsWith(message),true,"Test Failed");
-            Assert.assertEquals(ap.IsAccountPageVisible(), true, "Account not created");
-            System.out.println("Test Case Passed as expected for valid credentials");
-            logger.info("Signed in successfully from the login page");
-            ap.ClickSignOut();
-            logger.info("Logged Out Successfully");
-
-        }
-        else if (Status.equals("Invalid Password")) {
-            Assert.assertEquals(lp.ReturnPasswordMissingErrorMessage(),message,"Test Failed");
-            System.out.println("Test Case Passed as expected for invalid password");
-            logger.info("Showed following message for password => "+lp.ReturnPasswordMissingErrorMessage());
-
-        }
-        else if (Status.equals("Invalid Email")) {
-            Assert.assertEquals(lp.ReturnEmailMissingErrorMessage(),message,"Test Failed");
-            System.out.println("Test Case Passed as expected for invalid email");
-            logger.info("Showed following message for email => "+lp.ReturnEmailMissingErrorMessage());
-
-        }
-        else if (Status.equals("Invalid")) {
-            Assert.assertEquals(lp.ReturnAuthFailedErrorMessage(),message, "Test Failed");
-            System.out.println("Test Case Passed as expected for invalid credentials");
-            logger.info("Showed following message for authentication => "+lp.ReturnAuthFailedErrorMessage());
-
+        switch (Status) {
+            case "Valid" -> {
+                AccountPage ap = new AccountPage(driver);
+                Assert.assertTrue(ap.AccountCreatedMessage().startsWith(message), "Test Failed");
+                Assert.assertTrue(ap.IsAccountPageVisible(), "Account not created");
+                System.out.println("Test Case Passed as expected for valid credentials");
+                logger.info("Signed in successfully from the login page");
+                ap.ClickSignOut();
+                logger.info("Logged Out Successfully");
+            }
+            case "Invalid Password" -> {
+                Assert.assertEquals(lp.ReturnPasswordMissingErrorMessage(), message, "Test Failed");
+                System.out.println("Test Case Passed as expected for invalid password");
+                logger.info("Showed following message for password => " + lp.ReturnPasswordMissingErrorMessage());
+            }
+            case "Invalid Email" -> {
+                Assert.assertEquals(lp.ReturnEmailMissingErrorMessage(), message, "Test Failed");
+                System.out.println("Test Case Passed as expected for invalid email");
+                logger.info("Showed following message for email => " + lp.ReturnEmailMissingErrorMessage());
+            }
+            case "Invalid" -> {
+                Assert.assertEquals(lp.ReturnAuthFailedErrorMessage(), message, "Test Failed");
+                System.out.println("Test Case Passed as expected for invalid credentials");
+                logger.info("Showed following message for authentication => " + lp.ReturnAuthFailedErrorMessage());
+            }
         }
 
         logger.info("========== Test -> Test_LoginDDT Ended ===============");

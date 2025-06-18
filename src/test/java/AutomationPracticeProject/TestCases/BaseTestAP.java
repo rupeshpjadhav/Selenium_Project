@@ -19,6 +19,7 @@ import org.testng.annotations.Parameters;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -79,7 +80,8 @@ public class  BaseTestAP {
                     System.out.println("Invalid browser"); return;
             }
 
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+            //driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities); //deprecated
+            driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), capabilities);
 
         }
 
@@ -143,12 +145,14 @@ public class  BaseTestAP {
         String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
         File targetFile=new File(targetFilePath);
 
-        sourceFile.renameTo(targetFile);
+        boolean status = sourceFile.renameTo(targetFile);
 
+        if(!status) {
+            logger.info("Issue in storing the screenshot") ;
+        }
         return targetFilePath;
 
     }
-
 }
 
 
