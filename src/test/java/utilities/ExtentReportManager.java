@@ -6,6 +6,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -22,6 +23,8 @@ public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
+
+	Logger logger;
 
 	String repName;
 
@@ -91,7 +94,7 @@ public class ExtentReportManager implements ITestListener {
 			String imgPath = ((BaseTestAP) currentClass).captureScreen(result.getName(),driver);
 			test.addScreenCaptureFromPath(imgPath);
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			logger.info("Failed to create screenshot",e1);
 		}
 	}
 
@@ -112,7 +115,7 @@ public class ExtentReportManager implements ITestListener {
 		try {
 			Desktop.getDesktop().browse(extentReport.toURI());
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.info("Failed to show the report on UI",e);
 		}
 
 	}
