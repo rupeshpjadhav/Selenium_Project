@@ -11,14 +11,11 @@ public class RegistrationPage extends BaseClassAP {
         super(driver);
     }
 
-
-
     @FindBy (xpath = "//input[@id='id_gender1']")
     WebElement SelectMaleRadioBtn ;
 
     @FindBy (xpath = "//input[@id='id_gender2']")
     WebElement SelectFemaleRadioBtn ;
-
 
     @FindBy(xpath = "//input[@id='customer_firstname']")
     WebElement EnterFirstNameTxtField;
@@ -44,7 +41,6 @@ public class RegistrationPage extends BaseClassAP {
     @FindBy (xpath = "//span[normalize-space()='Register']")
     WebElement ClickRegisterBtn;
 
-
     public void SelectMaleRadioButton () {
         SelectMaleRadioBtn.click();
     }
@@ -61,12 +57,6 @@ public class RegistrationPage extends BaseClassAP {
     public void EnterLastNameText (String lname) {
         EnterLastNameTxtField.sendKeys(lname);
     }
-
-//    public String EnterEmailField () {
-//        EnterEmailField.click();
-//        return EnterEmailField.getAttribute("value");
-//    }
-
 
     public String EnterEmailField() {
         myWait.until(ExpectedConditions.visibilityOf(EnterEmailField));
